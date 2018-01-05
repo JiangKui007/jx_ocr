@@ -1,5 +1,6 @@
 *.jpg
 *.jpeg
+*.tiff
 baiduapi.py
 /pyocr/
 /tesseract/

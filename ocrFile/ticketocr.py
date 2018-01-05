@@ -2,6 +2,12 @@
 __author__ = 'JiangKui'
 __date__ = '2018/1/3 13:37'
 
+"""
+
+百度aip票据识别脚本
+
+"""
+
 from aip import AipOcr
 import json
 

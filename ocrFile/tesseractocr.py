@@ -2,6 +2,12 @@
 __author__ = 'JiangKui'
 __date__ = '2018/1/3 15:58'
 
+"""
+
+识别脚本尝试1（失败）
+
+"""
+
 import os
 import ctypes
 
