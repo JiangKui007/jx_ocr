@@ -32,13 +32,13 @@ import time
 #filePath = input("")
 #print ("请输入文件路径\n")
 
-imagePath = ('fapiao1.jpg')
+imagePath = ('temporary_file/a2.tiff')
 convertMode = ('L')
 
 
 '''将图片转为灰度图'''
 image = Image.open(imagePath).convert(convertMode)
-image.save('temporary_file/a3.tiff')
+image.save('temporary_file/a5.tiff')
 
 '''用恒定的阈值设置转换表'''
 #threshold 灰度系数
@@ -89,11 +89,11 @@ def denoising(im):
 bim = image.point(table,'1')
 
 """使用tesserocr图像识别引擎对图片识别"""
-bim.save('temporary_file/a4.tiff')
+bim.save('temporary_file/a6.tiff')
 
 #api法调用tesserocr
 api = tesserocr.PyTessBaseAPI(lang='chi_sim')
-api.SetImageFile('temporary_file/a4.tiff')
+api.SetImageFile('temporary_file/a6.tiff')
 print api.GetUTF8Text().strip()
 #print tesserocr.image_to_text(image)  # print ocr text from image
 # or
