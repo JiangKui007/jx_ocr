@@ -4,3 +4,6 @@
 baiduapi.py
 /pyocr/
 /tesseract/
+/CTPN/
+/sceneReco/
+tickerocr.py
