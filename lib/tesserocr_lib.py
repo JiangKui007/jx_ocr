@@ -6,17 +6,18 @@ import tesserocr
 
 
 #api法调用tesserocr
+#选择语言为中文简体
 api = tesserocr.PyTessBaseAPI(lang='chi_sim')
-# api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/Snip20180109_8.png')
-# print api.GetUTF8Text().strip()
-# api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/Snip20180109_9.png')
-# print api.GetUTF8Text().strip()
-# api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/Snip20180109_10.png')
-# print api.GetUTF8Text().strip()
-# api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/Snip20180109_11.png')
-# print api.GetUTF8Text().strip()
+
 api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/Snip20180115_28.png')
+
+
 print api.GetUTF8Text().strip()
+
+
+
+
+
 # api.SetImageFile('/Users/MRJ/PycharmProjects/OCR v1.0/lib/smoothing2.jpg')
 # print api.GetUTF8Text().strip()
 #print tesserocr.image_to_text(image)  # print ocr text from image

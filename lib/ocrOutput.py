@@ -22,7 +22,7 @@ def serviceOptions():
 #options["detect_direction"] = "false"
 #options["probability"] = "false"
     #调用通用文字识别接口
-def outputResult(client, filePath, options):
+def basicOutputResult(client, filePath, options):
     result = client.basicGeneral(filePath, options)
     result_json = (json.dumps(result, indent=4, sort_keys=True))
     result_dict = json.loads(result_json)
@@ -31,6 +31,7 @@ def outputResult(client, filePath, options):
 机打发票检验及输出
 """
 def jidafapiaoOutput(ajson):
+    #判断机打发票内容
     for items in ajson:
         value = items.get("words")
         if "机打" in value:
@@ -52,6 +53,7 @@ def jidafapiaoOutput(ajson):
 通用输出
 """
 def generalOutput(ajson):
+    #尚未完成
     for items in ajson:
         print (items.get("words"))
 
@@ -60,11 +62,11 @@ def generalOutput(ajson):
 """
 主程序
 """
-def readText(filename):
+def basicReadText(filename):
     client = baiduapi.serviceSetup()
     filePath = get_file_content(filename)
     options = serviceOptions()
-    result_dict = outputResult(client,filePath,options)
+    result_dict = basicOutputResult(client,filePath,options)
     ajson = result_dict.get("words_result")
     return ajson
 
