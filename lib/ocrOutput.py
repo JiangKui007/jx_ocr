@@ -57,8 +57,6 @@ def generalOutput(ajson):
     for items in ajson:
         print (items.get("words"))
 
-
-
 """
 主程序
 """
@@ -71,5 +69,5 @@ def basicReadText(filename):
     return ajson
 
 if __name__ == "__main__":
-    ajson = basicReadText ("/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/通用机打发票.jpg")
+    ajson = basicReadText ("/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/其他图片/Snip20180112_2.png")
     generalOutput(ajson)

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ufinterface billtype="gl" codeexchanged="y" docid="989898989898" proc="add" receiver="2000" roottag="voucher" sender="1999">
+	<voucher id="1499A91000000000WFKR">
+		<voucher_head>
+			<company>040104</company>
+			<voucher_type>记账凭证</voucher_type>
+			<fiscal_year>2017</fiscal_year>
+			<accounting_period>04</accounting_period>
+			<voucher_id>14</voucher_id>
+			<attachment_number>1</attachment_number>
+			<enter>林可加</enter>
+			<prepareddate>2017-04-07</prepareddate>
+			<cashier></cashier>
+			<signature>N</signature>
+			<checker></checker>
+			<posting_date></posting_date>
+			<posting_person></posting_person>
+			<voucher_making_system>现金管理</voucher_making_system>
+			<memo1></memo1>
+			<memo2></memo2>
+			<reserve1></reserve1>
+			<reserve2>N</reserve2>
+			<revokeflag></revokeflag>
+		</voucher_head>
+		<voucher_body>
+			<entry>
+				<entry_id>1</entry_id>
+				<account_code>51030801</account_code>
+				<abstract>俞光线报销差旅费（其中火车票费用）</abstract>
+				<settlement></settlement>
+				<bankcode></bankcode>
+				<notetype></notetype>
+				<document_id></document_id>
+				<document_date></document_date>
+				<currency>人民币</currency>
+				<unit_price>0.00000000</unit_price>
+				<exchange_rate1>0.00000000</exchange_rate1>
+				<exchange_rate2>1.00000000</exchange_rate2>
+				<debit_quantity>0.00000000</debit_quantity>
+				<primary_debit_amount>209.0000</primary_debit_amount>
+				<secondary_debit_amount>0.00000000</secondary_debit_amount>
+				<natural_debit_currency>209.0000</natural_debit_currency>
+				<credit_quantity>0.00000000</credit_quantity>
+				<primary_credit_amount>0.00000000</primary_credit_amount>
+				<secondary_credit_amount>0.00000000</secondary_credit_amount>
+				<natural_credit_currency>0.00000000</natural_credit_currency>
+				<bill_type></bill_type>
+				<bill_id></bill_id>
+				<bill_date></bill_date>
+				<auxiliary_accounting>
+					<item name="工程项目辅助核算"/>
+				</auxiliary_accounting>
+				<detail></detail>
+			</entry>
+			<entry>
+				<entry_id>2</entry_id>
+				<account_code>10020101</account_code>
+				<abstract>俞光线报销差旅费（其中火车票费用）</abstract>
+				<settlement></settlement>
+				<bankcode></bankcode>
+				<notetype></notetype>
+				<document_id></document_id>
+				<document_date></document_date>
+				<currency>人民币</currency>
+				<unit_price>0.00000000</unit_price>
+				<exchange_rate1>0.00000000</exchange_rate1>
+				<exchange_rate2>1.00000000</exchange_rate2>
+				<debit_quantity>0.00000000</debit_quantity>
+				<primary_debit_amount>209.0000</primary_debit_amount>
+				<secondary_debit_amount>0.00000000</secondary_debit_amount>
+				<natural_debit_currency>209.0000</natural_debit_currency>
+				<credit_quantity>0.00000000</credit_quantity>
+				<primary_credit_amount>0.00000000</primary_credit_amount>
+				<secondary_credit_amount>0.00000000</secondary_credit_amount>
+				<natural_credit_currency>0.00000000</natural_credit_currency>
+				<bill_type></bill_type>
+				<bill_id></bill_id>
+				<bill_date></bill_date>
+				<auxiliary_accounting>
+					<item name="工程项目辅助核算"/>
+					<item name="现金流量项目"/>
+					<item name="往来项目辅助核算"/>
+				</auxiliary_accounting>
+				<detail></detail>
+			</entry>
+		</voucher_body>
+	</voucher>
+</ufinterface>
