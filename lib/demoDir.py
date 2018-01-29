@@ -4,6 +4,7 @@ __date__ = '2018/1/19 15:01'
 
 import os
 import time
+from resize import resize
 import ocrOutput as output
 from zengzhishuiTemplate import zengzhishuiTemplate
 
@@ -21,6 +22,7 @@ def dirOcrTreatment():
              print ("~~~~~~~~~~~~~~~~~~~~~~~~~~")
              ajson = output.basicReadText(wholePath)
              output.generalOutput(ajson)
+
 
 #定义一个二维数组
 def getMatrix(rows,cols):
@@ -133,7 +135,7 @@ def zengzhishuifapiao_unit(file,path,txtf,):
 '''增值税发票本地文件夹处理函数'''
 def zengzhishuifapiao():
     #发票扫描、普通发票扫描20张
-    path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/发票扫描" #文件夹目录
+    path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/20180126" #文件夹目录
     files= os.listdir(path) #得到文件夹下的所有文件名称
     #计数及时间计算
     start_time = time.time()
@@ -149,6 +151,8 @@ def zengzhishuifapiao():
             times = times + 1
             print ("|正在扫描第"+str(times)+"张:"+file+"\n ------------------------------")
             txtf.write("\n第"+str(times)+"张:"+file+"内容\n")
+            #TODO:判断图片大小
+            #file = resize(path +"/"+ file)
             report_msg = zengzhishuifapiao_unit(file,path,txtf,)  #调用增值税核心处理单元
             if report_msg == 0:
                 right_times = right_times + 1
@@ -160,7 +164,6 @@ def zengzhishuifapiao():
     txtf.close()
     return times,right_times,error_times
 
-
-times,right_times,error_times =zengzhishuifapiao()
-
-print ("扫描结束，共识别"+str(times)+"次,正确识别次数"+str(right_times)+"条,错误识别次数"+str(error_times))
+if __name__ == "__main__":
+    times,right_times,error_times =zengzhishuifapiao()
+    print ("扫描结束，共识别"+str(times)+"次,正确识别次数"+str(right_times)+"条,错误识别次数"+str(error_times))

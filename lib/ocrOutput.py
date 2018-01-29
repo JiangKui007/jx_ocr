@@ -70,5 +70,6 @@ def basicReadText(filename):
     ajson = result_dict.get("words_result")
     return ajson
 
-#ajson = readText ("/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/通用机打发票.jpg")
-#generalOutput(ajson)
+if __name__ == "__main__":
+    ajson = basicReadText ("/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/通用机打发票.jpg")
+    generalOutput(ajson)

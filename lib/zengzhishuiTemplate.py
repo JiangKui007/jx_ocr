@@ -13,7 +13,7 @@ def get_file_content(filePath):
 
 """ 调用自定义模版文字识别 """
 def zengzhishuiTemplate(filePath):
-    #图片路径和模板id
+    #图片路径和模板id 吴根玉3bffadf998a5d9bc4e98d6e2f32d2be4、普通发票6bbaaf76e8824898b3bf473aeec777b9
     image = get_file_content(filePath)
     templateSign = "6bbaaf76e8824898b3bf473aeec777b9"
 

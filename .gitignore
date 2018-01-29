@@ -8,3 +8,4 @@ baiduapi.py
 /sceneReco/
 /OCR_pic/
 tickerocr.py
+*.txt
