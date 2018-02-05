@@ -1,8 +1,18 @@
 # _*_ coding:utf-8 _*_
 __author__ = 'JiangKui'
 __date__ = '2018/1/29 10:11'
-
+import os
 import xml.dom.minidom
+import urllib.request
+import urllib.parse
+import requests
+
+import xml.etree.ElementTree as ET
+
+import logging
+
+#logging.basicConfig("example.log",level=logging.DEBUG)
+
 """创建根节点"""
 def creatroot(doc,rootElement):
     root = doc.createElement(rootElement)
@@ -52,7 +62,7 @@ def entryContent():
         {
             "entry_id":'1',
             'account_code': '51030801',
-            'abstract': '俞光线报销差旅费（其中火车票费用）',
+            'abstract': 'jk测试接口',
             'settlement': '',
             'bankcode': '',
             'notetype': '',
@@ -63,11 +73,11 @@ def entryContent():
             'exchange_rate1': '0.00000000',
             'exchange_rate2': '1.00000000',
             'debit_quantity': '0.00000000',
-            'primary_debit_amount': '209.0000',
-            'secondary_debit_amount': '0.00000000',
-            'natural_debit_currency': '209.0000',
+            'primary_debit_amount': '88888.0000',
+            'secondary_debit_amount': '888888.00000000',
+            'natural_debit_currency': '88888.0000',
             'credit_quantity': '0.00000000',
-            'primary_credit_amount': '0.00000000',
+            'primary_credit_amount': '888888.00000000',
             'secondary_credit_amount': '0.00000000',
             'natural_credit_currency': '0.00000000',
             'bill_type': '',
@@ -100,7 +110,7 @@ def entryContent():
             'bill_type': '',
             'bill_id': '',
             'bill_date': '',
-            'auxiliary_accounting': [('工程项目辅助核算','100'),('现金流量项目','1124'),('往来项目辅助核算','09'),],
+            'auxiliary_accounting': [('test1','888888'),('test2','999999'),('test3','10000000'),],
             'detail': '',
         }
     ]
@@ -159,9 +169,37 @@ def creatXml():
                     entryGrandsunNode.setAttribute("name", k)
                     entryGrandsunNode.appendChild(doc.createTextNode(v))
                     entryChildNode.appendChild(entryGrandsunNode)
+#    doc.encoding('utf-8')
     return doc
 
+"""post请求"""
+def postRequest(doc):
+    headers = {'Content-Type': 'text/xml'}
+    #,headers = headers
+    url = "http://192.168.1.234:8090/service/XChangeServlet?account=001&receiver=040103"
+    #r = urllib.request.Request.post(url,data=doc)
+    response = requests.post(url,data=doc,headers = headers)
+    url_data = response.content
+
+    if response.status_code != 200:
+        return ('error code:' + response.status_code)
+    else:
+        return url_data
+
+
+
 if __name__ =="__main__":
-    fp = open("test2.xml",'w+')
-    doc = creatXml()
-    doc.writexml(fp,indent='',addindent='\t',newl='\n',encoding='UTF-8')
+    # fp = open("test2.xml",'w+')
+    # d = headContent()
+    # doc = creatXml()
+    # doc.writexml(fp,indent='',addindent='\t',newl='\n',encoding='utf-8')
+    # print (doc)
+
+
+    """打开xml文件，用post方式向url发起请求"""
+    with open("test2.xml", "r") as archivo:
+        request_data = archivo.read()
+    request_data = request_data.encode("utf-8")
+    msg = postRequest(request_data)
+    print (msg.decode("utf-8"))
+
