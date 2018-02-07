@@ -10,7 +10,7 @@ from zengzhishuiTemplate import zengzhishuiTemplate
 
 
 def dirOcrTreatment():
-    path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/发票扫描" #文件夹目录
+    path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/发票扫描/" #文件夹目录
     files= os.listdir(path) #得到文件夹下的所有文件名称
     for file in files: #遍历文件夹
          ext = ("jpg","jpeg","png")
@@ -44,8 +44,8 @@ def zengzhishuifapiao_unit(file,path,txtf,):
     #TODO:上传图片前用opencv对图片进行处理，去掉图片中的红色
     content = zengzhishuiTemplate(wholePath)
     api_time = time.time()
-    #api_cost_time = api_time-unit_start_time
-    #print ("调用接口使用时间"+str(api_cost_time)+"s")
+    api_cost_time = api_time-unit_start_time
+    print ("调用接口使用时间"+str(api_cost_time)+"s")
     #初始化错误代码
     isStructured = content.get("data").get("isStructured")
     error_code = content.get("error_code")
@@ -107,16 +107,16 @@ def zengzhishuifapiao_unit(file,path,txtf,):
                 print (lines)
                 txtf.write(lines+"\n")
 
-        #print ("开票内容存在"+str(len(double_array))+"条")
+        print ("开票内容存在"+str(len(double_array))+"条")
         for i in range(len(double_array)):
             #输出表格内容
-            #print (double_array[i])
+            print (double_array[i])
             txtf.write(sep.join(double_array[i])+"\n")
         unit_end_time = time.time()
         cost_time = (unit_end_time-unit_start_time)
-        #print ("本地耗时"+str(cost_time-api_cost_time)+"s")
-        #print ("单元耗时"+str(cost_time)+"s")
-        #print (" ------------------------------")
+        print ("本地耗时"+str(cost_time-api_cost_time)+"s")
+        print ("单元耗时"+str(cost_time)+"s")
+        print (" ------------------------------")
         error_msg_local =  0
         return error_msg_local
     else:
@@ -133,9 +133,8 @@ def zengzhishuifapiao_unit(file,path,txtf,):
         return error_msg_local
 
 '''增值税发票本地文件夹处理函数'''
-def zengzhishuifapiao():
-    #发票扫描、普通发票扫描20张
-    path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/20180126" #文件夹目录
+def zengzhishuifapiao(path):
+    #发票扫描路径导入
     files= os.listdir(path) #得到文件夹下的所有文件名称
     #计数及时间计算
     start_time = time.time()
