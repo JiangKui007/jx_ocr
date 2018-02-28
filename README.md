@@ -6,11 +6,15 @@
 欢迎提交issues讨论。
 # 项目小结
 ## 1.	项目目录概况：
--------
-    图片目录：/OCR_pic
-    图片处理目录：/ocrFile、/photoPretreatLib
-    图片识别引擎主要处理程序目录：/lib
-    其他插件及其文档地址：
+
+    ### 图片目录：
+    -------
+    /OCR_pic
+    ### 图片处理目录：
+    /ocrFile、/photoPretreatLib
+    ### 图片识别引擎主要处理程序目录：
+    /lib
+    ### 其他插件及其文档地址：
         tesseract       https://github.com/tesseract-ocr/tesseract
         chinese-ocr     https://github.com/chineseocr/chinese-ocr
         Chinese-ocr-with-cpu  https://github.com/eragonruan/text-detection-ctpn
@@ -19,9 +23,9 @@
         sceneReco       https://github.com/bear63/sceneReco
 ## 2. OCR识别
 --------
-	目录：/lib
-	依赖安装：/lib/demoPy27/requirements.txt
-	文件：
+	### 目录：/lib
+	### 依赖安装：/lib/demoPy27/requirements.txt
+	### 文件：
         baiduapi.py  文档地址：http://ai.baidu.com/docs#/ImageClassify-Python-SDK/top
         demoDir.py  批量ocr处理图片
         demoFile.py  逐个ocr处理图片
@@ -31,19 +35,23 @@
         zengzhishuiTemplate.py  增值税发票模板接口
         /demoPy27  兼容python2的百度ocr处理文档
 ## 3.图片预处理与OCR识别测试脚本：
----------
-    目录：/ocrFile
-    依赖：opencv3、tesseract、tensorflow
-    文件：
+
+    ### 目录：
+    ---------
+    /ocrFile
+    ### 依赖：opencv3、tesseract、tensorflow
+    ### 文件：
         electronic_tickets_ocr.py  电子发票预处理及tesseract识别
         mnist_advance.py  机器学习强化版脚本
         mnist_test.py  机器学习初步脚本
         tesseracocr.py  tesseract图片识别脚本
         ticketocr.py  百度aip票据识别脚本
 ## 4. 图片opencv处理：
----------
-    目录：/photoPretreatLib
-    文件：
+
+    ### 目录：
+    ---------
+    /photoPretreatLib
+    ### 文件：
         photoPretreatLib/color_split.py  opencv三原色分色算法
         photoPretreatLib/fileOcrTrement.py  opencv+tesseract处理算法脚本
         photoPretreatLib/opencv_test.py  opencv图像灰度处理算法
