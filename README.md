@@ -5,7 +5,8 @@
 
 欢迎提交issues讨论。
 # 项目小结
-1.	项目目录概况：
+## 1.	项目目录概况：
+-------
     图片目录：/OCR_pic
     图片处理目录：/ocrFile、/photoPretreatLib
     图片识别引擎主要处理程序目录：/lib
@@ -16,7 +17,8 @@
         Mnist-master    http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/mnist_beginners.html
         Pyocr           https://github.com/openpaperwork/pyocr
         sceneReco       https://github.com/bear63/sceneReco
-2. OCR识别
+## 2. OCR识别
+--------
 	目录：/lib
 	依赖安装：/lib/demoPy27/requirements.txt
 	文件：
@@ -28,7 +30,8 @@
         resize.py  图片大小规范文件
         zengzhishuiTemplate.py  增值税发票模板接口
         /demoPy27  兼容python2的百度ocr处理文档
-3.图片预处理与OCR识别测试脚本：
+## 3.图片预处理与OCR识别测试脚本：
+---------
     目录：/ocrFile
     依赖：opencv3、tesseract、tensorflow
     文件：
@@ -37,7 +40,8 @@
         mnist_test.py  机器学习初步脚本
         tesseracocr.py  tesseract图片识别脚本
         ticketocr.py  百度aip票据识别脚本
-4. 图片opencv处理：
+## 4. 图片opencv处理：
+---------
     目录：/photoPretreatLib
     文件：
         photoPretreatLib/color_split.py  opencv三原色分色算法
@@ -48,7 +52,8 @@
         photoPretreatLib/smoothing_method.py  opencv图片平滑处理算法
         photoPretreatLib/straight_line.py  opencv图片霍夫直线处理算法
         photoPretreatLib/threshold_method.py  opencv 图片二值化阈值处理算法
-部分参考文献：
+## 部分参考文献：
+----------
     邬满. 基于跳变检测和Tesseract的机打发票识别算法[J]. 信息与电脑:理论版, 2015(18):43-45.
     王宸敏. 基于OCR技术的化验单识别方法研究[D]. 浙江大学, 2016.
     万松. 基于Tesseract-OCR的名片识别系统的研究与实现[D]. 华南理工大学, 2014.
