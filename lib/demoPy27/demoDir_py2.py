@@ -4,10 +4,7 @@ __date__ = '2018/2/7 10:21'
 
 
 import os
-import time
 import json
-from resize import resize
-import ocrOutput as output
 from zengzhishuiTemplate import zengzhishuiTemplate
 
 def byteify(input):
@@ -36,7 +33,7 @@ def fileToDict(path):
             words = byteify(words)
             word_name = words.get('word_name')
             word = words.get('word')
-            print word_name,word
+            #print word_name,word
             dict1[word_name] = word
             #print dict1
             #list1 = list1.append(dict1)
@@ -58,9 +55,12 @@ def dirpath(path):
 
 
 if __name__  == "__main__":
-    # filepath = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/普通发票扫描20张/1516691879890.jpg"
-    # dict1 = fileToDict(filepath)
+    filepath = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/普通发票扫描20张/1516691879890.jpg"
+    dict1 = fileToDict(filepath)
 
     #调试：此处填图片文件夹
-    dir_path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/普通发票扫描20张/"
-    print dirpath(dir_path)
+    # dir_path = "/Users/MRJ/PycharmProjects/OCR v1.0/OCR_pic/普通发票扫描20张/"
+    # dir123 = fileToDict(dir_path)
+    dict1 = json.dumps(dict1, encoding='UTF-8', ensure_ascii=False)
+
+    print dict1

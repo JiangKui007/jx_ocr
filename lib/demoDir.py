@@ -143,7 +143,7 @@ def zengzhishuifapiao():
     right_times = 0
     error_times = 0
     localTime = time.strftime("%Y%m%d%H%M%S", time.localtime())
-    txtf = open("result"+localTime+".txt", 'a')
+    txtf = open("/logs/result"+localTime+".txt", 'a')
     print (" ------------------------------\n|正在对文件夹中的图片进行扫描......|\n ------------------------------")
     ext = ("jpg", "jpeg", "png")
     for file in files: #遍历文件夹
